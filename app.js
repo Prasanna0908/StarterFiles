@@ -16,9 +16,10 @@ app.use(morgan('dev'))                                   //If you want logging
 app.use(express.static(path.join(__dirname, 'public')))  //If you want to serve static files
 
 // Routes endpoints
-app.get('/home' , (req, res) => {
-    console.log("fg")
+app.get('/' , (req, res) => {
+    res.send("Boilerplate Code is succesfully installed !!")
 })
+
 app.use('/todo' , require('./routes/index'))
 
 //Error Handlers
